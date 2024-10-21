@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriTech Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-down {
+            animation: fadeInDown 0.3s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-green-600 text-white fixed w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold">AgriTech</div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="hover:text-green-200 transition-colors duration-300">Beranda</a>
+                    <a href="#services" class="hover:text-green-200 transition-colors duration-300">Layanan</a>
+                    <a href="#products" class="hover:text-green-200 transition-colors duration-300">Produk</a>
+                    <a href="#about" class="hover:text-green-200 transition-colors duration-300">Tentang Kami</a>
+                    <a href="#contact" class="hover:text-green-200 transition-colors duration-300">Kontak</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-green-600 fixed w-full z-40 top-16">
+        <div class="px-4 py-2 space-y-3">
+            <a href="#home" class="block hover:text-green-200 transition-colors duration-300">Beranda</a>
+            <a href="#services" class="block hover:text-green-200 transition-colors duration-300">Layanan</a>
+            <a href="#products" class="block hover:text-green-200 transition-colors duration-300">Produk</a>
+            <a href="#about" class="block hover:text-green-200 transition-colors duration-300">Tentang Kami</a>
+            <a href="#contact" class="block hover:text-green-200 transition-colors duration-300">Kontak</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 md:pt-32 pb-16 bg-gradient-to-br from-green-50 to-green-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-green-800 mb-6 leading-tight">
+                        Solusi Pertanian <span class="text-green-600">Modern</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+                        Tingkatkan hasil panen Anda dengan teknologi terkini dan praktik pertanian berkelanjutan.
+                    </p>
+                    <a href="#contact" class="btn btn-primary bg-green-600 hover:bg-green-700 text-white px-6 py-3 md:px-8 md:py-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg inline-flex items-center">
+                        <span>Hubungi Kami</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <div class="grid grid-cols-2 gap-4 relative">
+                        <div class="relative overflow-hidden rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Agriculture 1" class="w-full h-48 md:h-64 object-cover" loading="lazy">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 hover:bg-opacity-30 transition duration-300"></div>
+                        </div>
+                        <div class="relative overflow-hidden rounded-2xl shadow-lg transform hover:scale-105 transition duration-300 mt-8">
+                            <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Agriculture 2" class="w-full h-48 md:h-64 object-cover" loading="lazy">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 hover:bg-opacity-30 transition duration-300"></div>
+                        </div>
+                        <div class="relative overflow-hidden rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Agriculture 3" class="w-full h-48 md:h-64 object-cover" loading="lazy">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 hover:bg-opacity-30 transition duration-300"></div>
+                        </div>
+                        <div class="relative overflow-hidden rounded-2xl shadow-lg transform hover:scale-105 transition duration-300 mt-8">
+                            <img src="https://plus.unsplash.com/premium_photo-1664303828953-3e8ef4ac44e2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Agriculture 4" class="w-full h-48 md:h-64 object-cover" loading="lazy">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 hover:bg-opacity-30 transition duration-300"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-green-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-green-800 mb-12" data-aos="fade-up">Layanan Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-white shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                    <figure class="px-10 pt-10">
+                        <i class="fas fa-seedling text-5xl text-green-600"></i>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title text-xl font-semibold">Benih Unggul</h3>
+                        <p>Kami menyediakan benih berkualitas tinggi untuk hasil panen yang optimal.</p>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                    <figure class="px-10 pt-10">
+                        <i class="fas fa-tractor text-5xl text-green-600"></i>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title text-xl font-semibold">Peralatan Modern</h3>
+                        <p>Tingkatkan efisiensi dengan peralatan pertanian modern kami.</p>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-xl" data-aos="fade-up" data-aos-delay="300">
+                    <figure class="px-10 pt-10">
+                        <i class="fas fa-leaf text-5xl text-green-600"></i>
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h3 class="card-title text-xl font-semibold">Pertanian Organik</h3>
+                        <p>Solusi pertanian organik untuk hasil yang sehat dan ramah lingkungan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-gradient-to-b from-green-800 to-green-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-opacity-10 bg-green-700 pattern-dots pattern-green-600 pattern-bg-green-800 pattern-size-4 pattern-opacity-10"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl font-bold text-center text-green-100 mb-12" data-aos="fade-up">Produk Unggulan</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card bg-green-700 shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                    <figure><img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Vegetables" class="h-48 w-full object-cover" /></figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-green-100">Sayuran Segar</h3>
+                        <p class="text-green-200">Berbagai jenis sayuran organik segar dari kebun kami.</p>
+                        <div class="card-actions justify-end mt-4">
+                            <button class="btn btn-primary bg-green-500 hover:bg-green-600 border-none">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-green-700 shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                    <figure><img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Fruits" class="h-48 w-full object-cover" /></figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-green-100">Buah-buahan Pilihan</h3>
+                        <p class="text-green-200">Buah-buahan segar dan manis langsung dari perkebunan.</p>
+                        <div class="card-actions justify-end mt-4">
+                            <button class="btn btn-primary bg-green-500 hover:bg-green-600 border-none">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-green-700 shadow-xl" data-aos="fade-up" data-aos-delay="300">
+                    <figure><img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Grains" class="h-48 w-full object-cover" /></figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-green-100">Biji-bijian Berkualitas</h3>
+                        <p class="text-green-200">Biji-bijian berkualitas tinggi untuk kebutuhan pangan.</p>
+                        <div class="card-actions justify-end mt-4">
+                            <button class="btn btn-primary bg-green-500 hover:bg-green-600 border-none">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-green-700 shadow-xl" data-aos="fade-up" data-aos-delay="400">
+                    <figure><img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Dairy" class="h-48 w-full object-cover" /></figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-green-100">Produk Susu</h3>
+                        <p class="text-green-200">Produk susu segar dari peternakan lokal terpercaya.</p>
+                        <div class="card-actions justify-end mt-4">
+                            <button class="btn btn-primary bg-green-500 hover:bg-green-600 border-none">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-green-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-green-800 mb-16" data-aos="fade-up">Tentang Kami</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" alt="About AgriTech" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <h3 class="text-3xl font-semibold mb-6 text-green-700">Misi Kami</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        AgriTech didirikan dengan visi untuk merevolusi industri pertanian melalui inovasi teknologi dan praktik berkelanjutan. Kami berkomitmen untuk mendukung petani lokal dan menyediakan produk berkualitas tinggi kepada konsumen.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Dengan tim ahli yang berdedikasi, kami terus mengembangkan solusi pertanian yang efisien dan ramah lingkungan. Bersama-sama, kita dapat menciptakan masa depan pertanian yang lebih baik.
+                    </p>
+                    <!-- Tambahkan tombol "Pelajari Lebih Lanjut" di sini -->
+                    <a href="#" class="btn btn-primary bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg inline-flex items-center">
+                        <span>Pelajari Lebih Lanjut</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-green-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-green-800 mb-16" data-aos="fade-up">Hubungi Kami</h2>
+            <div class="flex flex-col md:flex-row items-stretch justify-center gap-12">
+                <div class="md:w-1/2 bg-white rounded-lg shadow-xl p-8" data-aos="fade-right">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2 text-sm font-medium text-green-700">Nama</label>
+                            <input type="text" id="name" class="input input-bordered w-full bg-white focus:ring-2 focus:ring-green-500" placeholder="Nama Anda" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2 text-sm font-medium text-green-700">Email</label>
+                            <input type="email" id="email" class="input input-bordered w-full bg-white focus:ring-2 focus:ring-green-500" placeholder="email@example.com" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2 text-sm font-medium text-green-700">Pesan</label>
+                            <textarea id="message" rows="5" class="textarea textarea-bordered w-full bg-white focus:ring-2 focus:ring-green-500" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary bg-green-600 hover:bg-green-700 text-white w-full transition duration-300 ease-in-out transform hover:scale-105">Kirim Pesan</button>
+                    </form>
+                </div>
+                <div class="md:w-1/2 bg-white rounded-lg shadow-xl p-8 flex flex-col justify-between" data-aos="fade-left">
+                    <div>
+                        <h3 class="text-3xl font-semibold mb-6 text-green-800">Informasi Kontak</h3>
+                        <div class="space-y-4">
+                            <p class="flex items-center text-green-700"><i class="fas fa-map-marker-alt text-green-600 mr-4 text-xl"></i> Jl. Pertanian No. 123, Kota Agraria</p>
+                            <p class="flex items-center text-green-700"><i class="fas fa-phone text-green-600 mr-4 text-xl"></i> +62 123 4567 890</p>
+                            <p class="flex items-center text-green-700"><i class="fas fa-envelope text-green-600 mr-4 text-xl"></i> info@agritech.com</p>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-semibold mb-4 text-green-800">Ikuti Kami</h4>
+                        <div class="flex space-x-6">
+                            <a href="#" class="text-green-600 hover:text-green-700 transition-colors duration-300"><i class="fab fa-facebook-square fa-2x"></i></a>
+                            <a href="#" class="text-green-600 hover:text-green-700 transition-colors duration-300"><i class="fab fa-twitter-square fa-2x"></i></a>
+                            <a href="#" class="text-green-600 hover:text-green-700 transition-colors duration-300"><i class="fab fa-instagram-square fa-2x"></i></a>
+                            <a href="#" class="text-green-600 hover:text-green-700 transition-colors duration-300"><i class="fab fa-linkedin fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-3xl font-bold mb-4">AgriTech</h3>
+                    <p class="text-green-200 mb-4">Solusi Pertanian Modern</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-green-200 hover:text-white transition-colors duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-green-200 hover:text-white transition-colors duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-green-200 hover:text-white transition-colors duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-green-200 hover:text-white transition-colors duration-300"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-green-200 hover:text-white transition-colors duration-300">Beranda</a></li>
+                        <li><a href="#services" class="text-green-200 hover:text-white transition-colors duration-300">Layanan</a></li>
+                        <li><a href="#products" class="text-green-200 hover:text-white transition-colors duration-300">Produk</a></li>
+                        <li><a href="#about" class="text-green-200 hover:text-white transition-colors duration-300">Tentang Kami</a></li>
+                        <li><a href="#contact" class="text-green-200 hover:text-white transition-colors duration-300">Kontak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Kontak</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> Jl. Pertanian No. 123, Kota Agraria</li>
+                        <li class="flex items-center"><i class="fas fa-phone mr-2"></i> +62 123 4567 890</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> info@agritech.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Newsletter</h4>
+                    <p class="text-green-200 mb-4">Berlangganan untuk mendapatkan update terbaru.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email Anda" class="p-2 rounded-l-lg w-full focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <button type="submit" class="bg-green-600 text-white p-2 rounded-r-lg hover:bg-green-700 transition-colors duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-8 border-green-700">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2023 AgriTech. All rights reserved.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="text-green-200 hover:text-white mr-4 transition-colors duration-300">Kebijakan Privasi</a>
+                    <a href="#" class="text-green-200 hover:text-white transition-colors duration-300">Syarat dan Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('animate-fade-in-down');
+            });
+
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('animate-fade-in-down');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
